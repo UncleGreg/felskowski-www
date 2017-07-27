@@ -44,7 +44,7 @@ module.exports = {
     compress: true,
     port: 8080,
     stats: 'errors-only',
-    open: true,
+   // open: true,
     openPage: '',
     hot:true
   },
