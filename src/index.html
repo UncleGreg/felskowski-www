@@ -6,16 +6,25 @@
 	<link rel="icon" href=<%= require("./img/favicon.png") %> />
 </head>
 <body>
-	
-	<section class="page-landing">
+  <div id="fullpage">
+	<section class="section page-landing">
 		<nav class="page-nav">
-			<li><a href="">Menu</a></li>
 			<li><a href=""><img id="logo" src=<%= require("./img/logo.png") %> /></a></li>
-			<li><a href="">Kontakt</a></li>
+			<li class="nav-menu"><div class="bar"></div></li>
 		</nav>
+    <div class="page-menu">
+      <ul>
+      <li><a href="">Usługi</a></li>
+      <li><a href="">O mnie</a></li>
+      <li><a href="">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="page-landing__text">
 		<h1>Profesjonalne usługi informatyczne</h1>
 		<h3>dla firm i klientów indywidualnych</h3>
-	</section>
-  <p>some text to check if browser sync is working</p>
+  </div>
+</section>
+<div class="section">Hello</div>
+  </div>
 </body>
 </html>

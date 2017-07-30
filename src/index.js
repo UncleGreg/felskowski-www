@@ -1,3 +1,14 @@
 import css from './index.styl';
+import $ from 'jquery';
+import 'fullpage.js';
 
-console.log("Hello world! I'am webpack app!");
+$(document).ready(function() {
+   $('#fullpage').fullpage();
+});
+
+(function () {
+  $('.nav-menu').on('click', function() {
+    $('.bar').toggleClass('animate');
+    $('.page-menu').toggleClass('menu-opened');
+  })
+})();

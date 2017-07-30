@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Overpass');
 
 body, html
   padding 0
   margin 0
-  font-family 'Lato', sans-serif
+  font-family 'Helvetica Neue', sans-serif
 
 .fp-tableCell
   display flex
@@ -34,7 +34,6 @@ body, html
   position fixed
   top 60px
   left 50%
-  z-index 2
   transform translateX(-50%)
   display flex
   width 80%
@@ -51,30 +50,12 @@ body, html
 
 .page-menu
   position absolute
-  z-index 1
   right 0
   top 0
   height 100vh
   background-color rgba(0,0,0,0.2)
-  width 0
-  overflow hidden
-  transition .5s
-  ul
-    position absolute
-    top 50%
-    transform translateY(-50%)
-    text-align right
-    right 50%
-    overflow hidden
-    position relative
-    li
-      list-style none
-      padding 20px 0
-      a
-        color #fff
-        text-decoration none
-.menu-opened
-  width 400px 
+  width 400px
+
 
 //=========== HAMBURGER =======  // {{{
   
@@ -85,9 +66,7 @@ bar-spacing = 10px
 .nav-menu {
   width: bar-width;
 	height: bar-height + bar-spacing*2;
-  cursor: pointer;
-  position relative
-  z-index 2
+	cursor: pointer;
 }
 
 .bar,

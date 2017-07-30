@@ -7,10 +7,10 @@ const PurifyCSSPlugin = require('purifycss-webpack');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const cssDev = ['style-loader', 'css-loader', 'stylus-loader'];
+const cssDev = ['style-loader', 'css-loader', 'autoprefixer-loader', 'stylus-loader'];
 const cssProduction = ExtractTextPlugin.extract({
           fallback: 'style-loader', 
-          use: ['css-loader', 'stylus-loader'],
+          use: ['css-loader', 'postcss-loader', 'stylus-loader'],
         })
 const cssConfig = isProduction ? cssProduction : cssDev;
 
@@ -29,7 +29,13 @@ module.exports = {
       {
         test:/\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader' 
+        use:{
+          loader: 'babel-loader',
+          options: {
+            "presets": ["env"],
+            "plugins": ["syntax-dynamic-import"]
+          }
+          }
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
@@ -42,10 +48,11 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, '/dist'),
     compress: true,
-    port: 8080,
+    port: 8000,
     stats: 'errors-only',
-   // open: true,
+    open: true,
     openPage: '',
+    disableHostCheck: true,
     hot:true
   },
   plugins:[
@@ -62,15 +69,17 @@ module.exports = {
       disable: !isProduction,
       allChunks: true
     }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new PurifyCSSPlugin({
       paths: glob.sync(path.join(__dirname, 'src/*.html'))
     }),
     new BrowserSyncPlugin({
+      open: 'external',
       host: 'localhost',
       port: 3000,
-      proxy: 'http://localhost:8080/',
+      proxy: 'http://localhost:8000',
       files: [
         {
           match: [
