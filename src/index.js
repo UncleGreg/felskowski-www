@@ -4,7 +4,7 @@ import 'fullpage.js';
 
 $(document).ready(function() {
    $('#fullpage').fullpage({
-     anchors:['home', 'about', 'services', 'contact']
+     anchors:['home', 'about', 'services', 'contact'],
    });
 });
 
