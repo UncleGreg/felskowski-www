@@ -185,10 +185,16 @@ body, html
   &:hover
     background-color #1A65E3
     border-color #1A65E3
+  &-contact
+    margin-top 40px
+    font-size 1em
+    font-weight 700
+
 
 .page-services
   background-color #10213D
   color #fff
+  position relative
   
 .services-grid
   width 65%
@@ -209,13 +215,14 @@ body, html
   background-image url('./img/footer-bg.jpg')
   background-repeat no-repeat
   background-size cover
-  background-position bottom
+  background-position  bottom 
   color #fff
   font-weight 300
+  position relative
   p
     font-size 1.6em
     margin-bottom 60px
-  a
+  .contact-link
     color #fff
     font-size 1.8em
     text-decoration none
@@ -237,6 +244,41 @@ body, html
     &:hover:after
       opacity 1
       right 0
+
+.side-nav
+  position absolute
+  right 10%
+  transform rotate(90deg) translateY(-50%)
+  top 50%
+  z-index 1
+  text-transform uppercase
+  font-weight 700
+  letter-spacing 1px
+  white-space nowrap
+  &:after
+    content attr(data-text)
+    position absolute
+    right 50%
+    top -65px
+    transform translateX(50%)
+    font-size 8em
+    font-weight 700
+    opacity .05
+    z-index -1
+    text-transform uppercase
+  &__arrow-down
+    content ""
+    background-image url('img/side-nav-arrow.svg')
+    width 40px
+    height 40px
+    background-size contain
+    display block
+    position absolute
+    bottom 5%
+    right 10%
+    transform rotate(-90deg)
+
+
 
 //=========== HAMBURGER =======  // {{{
   

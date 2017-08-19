@@ -3,7 +3,9 @@ import $ from 'jquery';
 import 'fullpage.js';
 
 $(document).ready(function() {
-   $('#fullpage').fullpage();
+   $('#fullpage').fullpage({
+     anchors:['home', 'about', 'services', 'contact']
+   });
 });
 
 (function () {
