@@ -64,6 +64,10 @@ module.exports = {
         hash:true,
         template: './src/index.html',
       }),
+    new HtmlWebpackPlugin({
+      filename: 'test.html',
+      template: './src/test.html'
+    }),
     new ExtractTextPlugin({
       filename: 'index.css',
       disable: !isProduction,
