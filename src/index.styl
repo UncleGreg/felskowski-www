@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
 
 body, html
@@ -6,7 +6,8 @@ body, html
   margin 0
   font-family 'Rubik', sans-serif
 
-.fp-tableCell
+.section
+  min-height 100vh
   display flex
   flex-direction column
   align-items center
@@ -15,7 +16,6 @@ body, html
 .section-title
   font-size 4.5em
   margin-bottom 100px
-
 
 .hr-top
   position relative
@@ -159,11 +159,10 @@ body, html
   background-size cover
   color #fff
   position relative
-  .fp-tableCell
-    flex-direction row
-    justify-content flex-start
-    width 80%
-    margin 0 auto
+  flex-direction row
+  justify-content flex-start
+  padding 0 10% 
+  margin 0 auto
   &__text
     margin-right 50px
     max-width 700px
@@ -180,11 +179,14 @@ body, html
   color #fff
   text-decoration none
   text-transform uppercase
-  border 2px solid #fff
   padding 10px 40px
+  background-color #1A65E3
+  box-shadow 0px 4px 16px 0px #0d2f56
+  font-size .8em
+  letter-spacing 1px
+  font-weight 600
   &:hover
-    background-color #1A65E3
-    border-color #1A65E3
+    background-color #5273e3
   &-contact
     margin-top 40px
     font-size 1em
@@ -195,21 +197,93 @@ body, html
   background-color #10213D
   color #fff
   position relative
+  padding-top 200px
   
-.services-grid
-  width 65%
+.services-title
+  font-size 3em
+  position absolute
+  left 10%
+  top 20%
+  &:before
+    content ""
+    height 3px
+    width 200px
+    display block
+    position absolute
+    background-color #1a65e3 
+    left -210px
+    top 25px
+
+.grid-row
+  position relative
   display flex
-  flex-wrap wrap
-  font-family 'PT Serif', serif
+  flex 1
+  &.right
+    justify-content flex-end
+.services-grid
+  width 60%
+  padding 10% 0
+  margin 0 auto
   &__item
-    width calc(100%/3)
-    box-sizing border-box
-    padding 40px 20px
+    width 500px
+    color #fff
+    text-decoration none
+    &:hover
+      .services-grid__image:after
+        opacity .4
+  &__image
+    background-image url('http://www.pypinformatica.com.ar/img/img_2_home.jpg')
+    height 300px
+    width 500px
+    position relative
+    box-shadow: 0px 6px 43px -2px #05081A
+    &:after
+      content ""
+      display block
+      width 100%
+      background-color #1a65e3
+      height 100%
+      opacity 0
+      transition .2s
+      
+    &:before
+      content attr(data-number)
+      position absolute
+      color #1a65e3
+      font-size 6em
+      font-weight bold
+      top -.6em
+      left 10px
+      opacity .6
   &__title
     font-size 2em
     margin-bottom 20px
+    font-weight 700
+    position relative
+    top -25px
+    left 10px
+    font-size 2.5em
+    text-shadow: 0px 6px 43px -2px #05081A
+    background-color #1a65e3
+    display inline-block
+    padding 0 10px
+    &:after
+      content ""
+      position absolute
+      display inline-block
+      background #1A65E3
+      height 34px
+      width 100%
+      top 19px
+      z-index -1
+      opacity 0
+      right -200px
+      transition .4s all ease
   &__text
     font-size 1.2em
+    position relative
+    top -20px
+    left 10px
 
 .page-contact
   background-image url('./img/footer-bg.jpg')
@@ -289,6 +363,15 @@ body, html
     right 5%
     transform rotate(90deg)
 
+.page-features
+  &__wrap
+    display flex
+    height 100vh
+    width 100%
+    div
+      flex 1
+      background red
+      border 1px solid blue
 
 //=========== HAMBURGER =======  // {{{
   
