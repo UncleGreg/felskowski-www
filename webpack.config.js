@@ -65,8 +65,8 @@ module.exports = {
         template: './src/index.html',
       }),
     new HtmlWebpackPlugin({
-      filename: 'test.html',
-      template: './src/test.html'
+      filename: 'services.html',
+      template: './src/services.html'
     }),
     new ExtractTextPlugin({
       filename: 'index.css',
