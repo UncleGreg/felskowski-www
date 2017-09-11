@@ -48,7 +48,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, '/dist'),
     compress: true,
-    port: 8000,
+    port: 25555,
     stats: 'errors-only',
     open: true,
     openPage: '',
@@ -81,9 +81,9 @@ module.exports = {
     }),
     new BrowserSyncPlugin({
       open: 'external',
-      host: 'localhost',
-      port: 3000,
-      proxy: 'http://localhost:8000',
+      host: '0.0.0.0',
+      port: 25550,
+      proxy: 'http://localhost:25555',
       files: [
         {
           match: [
