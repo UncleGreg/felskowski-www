@@ -18,6 +18,10 @@ body, html
   font-size 4.5em
   margin-bottom 100px
 
+.section-text
+  a
+    color #1a65e3
+
 .bg-header
   width 100%
   height 350px
@@ -440,7 +444,7 @@ body, html
   &__image
     background-image url('http://www.pypinformatica.com.ar/img/img_2_home.jpg')
     height 250px
-    width 450px
+    max-width 450px
     position relative
     box-shadow: 0px 6px 43px -2px #05081A
     &:after
@@ -509,11 +513,29 @@ body, html
   display flex
   flex-direction column
   justify-content space-between
+  ul
+    display flex
+    width 80%
+    margin 40px auto
+    text-align center
+    li
+      flex 1
+      list-style none
+      a
+        color #fff
+        text-decoration none
   .footer-bottom
     display flex
     padding 10px 10%
     justify-content space-between
     background-color #21272b
+
+
+//====== CONTACT FORM ========
+
+.contact-form
+  display flex
+  flex-direction column
 
 
 //=========== HAMBURGER =======  // {{{

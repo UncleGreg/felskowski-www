@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-	<title>Dariusz Felskowski | Usługi informatyczne</title>
+	<title>Usługi informatyczne | Dariusz Felskowski</title>
 	<link rel="icon" href=<%= require("./img/favicon.png") %> />
 </head>
 <body>
@@ -107,10 +107,19 @@
     <a class="side-nav__arrow-down" href="#contact"></a>
 </div>
 <div class="section page-contact">
+
+	<form class="contact-form" method="POST" action="contact.php">
+		<p>Name</p> <input type="text" name="name">
+		<p>Email</p> <input type="text" name="email">
+		<p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+		<input type="submit" value="Send"><input type="reset" value="Clear">
+	</form>
+
+
   <h2 class="section-title hr-top">Kontakt</h2>
-  <p>Aktualnie przyjmuję nowe zlecenia. Chciałbyś omówić swoje?</p>
-  <a class="contact-link" href="">+48 888 888 888</a>
-  <a class="contact-link" href="mailto:kontakt@felskowski.com">kontakt@felskowski.com</a>
+  <p class="section-text">Zadzwoń <a href="">888 888 888</a> lub napisz na <a href="mailto:kontakt@felskowski.com">kontakt@felskowski.com</a>
+    <br> Wspólnie określimy spodziewane efekty oraz warunki zlecenia.
+  </p>
   <div class="button-contact">
   <a class="button" href="#uslugi">Napisz do mnie</a>
   </div>
