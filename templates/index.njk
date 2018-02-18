@@ -1,0 +1,87 @@
+{% extends "_base.njk" %}
+
+{% block meta_title %}Usługi informatyczne | Dariusz Felskowski{% endblock %}
+
+{% block content %}
+  <div id="fullpage">
+	<section class="section page-landing">
+	{% include "landing-stroke.svg" %}
+    <div class="page-landing__text">
+      <h1>Usługi <strong class="action-text">informatyczne</strong> <br> dla firm i klientów  <br>indywidualnych</h1>
+    </div>
+    <a class="landing-arrow" href="#about"></a>
+</section>
+<div id="about" class="section page-about" data-anchor="about">
+	<div class="page-about__text">
+		<h2 class="about-title">KIM JESTEM</h2>
+		<p>Z wykształcenia jestem inżynierem informatykiem. Moja przygoda z komputerami zaczeła się wiele lat temu, od tego czasu nieustannie poszerzam swoją wiedzę z zakresu informatyki i wykorzystuję ją na codzień zarówno w życiu prywatnym jak i zawodowym. Z wielkim zainteresowaniem i pasją śledzę rozwój nowych technologii ze świata informatyki i pochłaniam wiedzę na ich temat. Staram się sprostać oczekiwaniom współczesnego użytkownika komputera oferując szeroki wachlarz najnowszych rozwiązań teleinformatycznych.</p>
+		<div class="page-about__action">
+			<a class="button" href="/uslugi/">Czym sie zajmuje</a>
+		</div>
+	<div class="page-about__image"></div>
+	</div>
+</div>
+
+
+
+
+<section class="uslugi">
+	<div class="uslugi-item">
+		<div class="uslugi-text">
+			<span class"ulugi-number">01</span>
+			<hr>
+			<h3 class="uslugi-tytul">Bezpieczeństwo <br>
+				danych</h3>
+			<p>Dobrze zabezpieczone dane to w dzisiejszych czasach priorytet każdej firmy. Dzięki mnie Twoje pliki będą zawsze bezpieczne.</p>
+			<a class="button-more" href="/bezpieczenstwo/">Więcej</a>
+		</div>
+		<div class="uslugi-more">
+			<div class="uslugi-photo bezpieczenstwo"></div>
+		</div>
+	</div>
+
+	<div class="uslugi-item right">
+		<div class="uslugi-more">
+			<div class="uslugi-photo serwery"></div>
+		</div>
+		<div class="uslugi-text">
+			<span class"ulugi-number">02</span>
+			<hr>
+			<h3 class="uslugi-tytul">Usługi <br>serwerowe</h3>
+			<p>Prawidłowo skonfigurowany serwer zapewnia stały dostęp do potrzebnych usług oraz stabilne działanie.</p>
+			<a class="button-more" href="/serwery/">Więcej</a>
+		</div>
+	</div>
+	<div class="uslugi-item bottom">
+		<div class="uslugi-text">
+			<span class"ulugi-number">03</span>
+			<hr>
+			<h3 class="uslugi-tytul">Monitorowanie <br> systemów</h3>
+			<p>Dzięki mnie będziesz w stanie szybko zareagować w przypadku awarii w Twojej firmie. </p>
+			<a class="button-more" href="/monitoring/">Więcej</a>
+		</div>
+		<div class="uslugi-more">
+			<div class="uslugi-photo monitoring"></div>
+		</div>
+	</div>
+</section>
+<div class="services-button">
+<a class="button" href="/uslugi/">Zobacz więcej usług</a>
+</div>
+<section class="page-why">
+	<div class="why-text">
+	<h2>Dlaczego warto skorzystać<br>z moich usług?</h2>
+	<p>Na rynku istnieje wiele firm, które świadczą podobne usługi dla dużych firm. Problemem jest że zazwyczaj nie są zainteresowane wykonywaniem zleceń dla pojedyńczych osób lub proponują je w cenach nie osiągalnych dla prywatnych użytkowników.<br><br> Działając samodzielnie mogę każdego potraktować w sposób indywidualny, dostosować się do jego potrzeb i oczekiwań. Wykonując pracę osobiście robię to w sposób wyjątkowo rzetelny biorąc pełną odpowiedzialność za efekty, jestem w stanie zaoferować usługi informatyczne w atrakcyjnych cenach. Ponieważ komputery to moja pasja od wielu lat, do swojej pracy podchodzę ze szczególnym zaangażowaniem oferując wysoki standard wykonania.</p>
+	<div class="why-image"></div>
+	<div class="why-points">
+		<div class="rzetelnosc">Rzetelność</div>
+		<div class="jakosc">Jakość</div>
+		<div class="terminowosc">Terminowość</div>
+	</div>
+</div>
+</section>
+
+
+
+
+{% endblock %}

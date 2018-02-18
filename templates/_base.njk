@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta charset="UTF-8">
+    <title>{% block meta_title %}{% endblock %}</title>
+    <link href="/img/favicon.png" rel="icon" type="" >
+    <meta name="theme-color" content="#293172">
+    <meta name="msapplication-navbutton-color" content="#293172">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#293172">
+    <meta name="description" content="Kompleksowa obsługa informatyczna na terenie trójmiasta i okolic
+    Optymalizacja serwerów · Pomoc komputerowa · Modernizacja struktury informatycznej">
+    <meta name="keywords" content="informatyka, administracja, sieć, serwer, naprawa, serwis, komputer">
+
+    <meta property="og:title" content="Dariusz Felskowski | kompleksowa obsługa informatyczna" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/img/banner.jpg" />
+    <meta property="og:url" content="http://www.felskowski.com" />
+    <meta property="og:description" content="">
+    <link rel="stylesheet" href="/css/main.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
+    {% if not settings.DEBUG %}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113591269-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-113591269-1');
+</script>
+
+    <script type="text/javascript">
+      window.smartlook||(function(d) {
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+      })(document);
+smartlook('init', 'a69c65681f586044a1ea8da59d1d25ab5113c2ce');
+    </script>
+    {% endif %}
+</head>
+<body>
+    <nav class="page-nav">
+		<a id="js-menu" class="nav-menu__icon">
+			<div id="js-menu-bar" class="bar"></div>
+		</a>
+      <ul class="nav-menu">
+        <li><a href="/"><img id="logo" src="/img/logo.png" alt="Dariusz Felskowski usługi informatyczne logo"/></a></li>
+        <li class="mobile-hide"><a href="/uslugi/">Usługi</a></li>
+        <li class="mobile-hide"><a href="#kontakt">Kontakt</a></li>
+      </ul>
+      <ul id="js-menu-list" class="mobile-menu">
+        <li><a href="/uslugi/">Usługi</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a class="nav-phone" href="tel:+48791312612">+48 791 312 612</a></li>
+      </ul>
+    </nav>
+	{% block content %}{% endblock %}
+<div id="kontakt" class="section page-contact">
+	<div class="contact-wrap">
+		<div class="contact-text">
+  <h2 class="contact-title">Kontakt</h2>
+	<p>Aktualnie przyjmuję nowe zlecenia na terenie Trójmiasta i okolic.<br>
+				 Wspólnie określimy spodziewane efekty oraz warunki zlecenia.
+			</p>
+			<p class="contact-contact"> 
+				<a class="contact-phone" href="tel:+48791312612">+48 791 312 612</a>
+			 	<a class="contact-mail" href="mailto:kontakt@felskowski.com">kontakt@felskowski.com</a>
+			</p>
+		</div>
+		<div class="contact-form">
+      <form class="contact-form__form" action="https://formspree.io/kontakt@felskowski.com"
+        method="POST">
+        <div class="form-flex">
+          <div>
+            <label for="name">Twoje imię <span>*</span></label>
+            <input type="text" name="name">
+          </div>
+          <div>
+            <label for="_replyto">Twój e-mail <span>*</span></label>
+            <input type="email" name="_replyto">
+          </div>
+        </div>
+        <label for="message">Jak mogę pomóc?</label>
+        <textarea type="text" rows="5" name="message"></textarea>
+        <input class="button" type="submit" value="Wyślij wiadomość">
+			</form> 
+		</div>
+	</div>
+  </div>
+	<footer class="page-footer">
+		<div class="page-footer__links">
+			<div class="footer-list">
+        <ul>
+          <li class="copyright">© 2017 Dariusz Felskowski. All rights reserved</li>
+          <li><a href="/uslugi/">Usługi</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li class="made-by">Wykonanie <a href="http://www.gwitczak.com" target="_blank">GW</a></li>
+        </ul>
+      </div>
+		</div>
+  </footer>
+</body>
+</html>
